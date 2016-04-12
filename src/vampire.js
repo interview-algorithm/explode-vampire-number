@@ -14,7 +14,7 @@ export const isVampirePair = (prev, next) => {
     return (prev * next).toString(10).split('').sort().join('') === (prev + '' + next).split('').sort().join('');
 };
 
-export const parseVampire = num => {
+export const parseVampireNumber = num => {
     let pairs = [];
 
     if (isNaN(num)) {
@@ -59,5 +59,5 @@ export const parseVampire = num => {
 };
 
 export const isVampireNumber = num => {
-    return !!parseVampire(num).length;
+    return !!parseVampireNumber(num).length;
 };

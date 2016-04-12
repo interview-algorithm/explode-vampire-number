@@ -47,12 +47,12 @@ describe('#isVampirePair', function() {
     });
 });
 
-describe('#parseVampire', function() {
+describe('#parseVampireNumber', function() {
     Object.keys(cases).forEach(function(num) {
         var pairsStrs = cases[num].map(function(pair) {
             return pair.join();
         });
-        var parsedPairs = Vampire.parseVampire(num);
+        var parsedPairs = Vampire.parseVampireNumber(num);
 
         parsedPairs.forEach(function(pair) {
             it(pair.join() + ' should be parsed out for ' + num, function() {

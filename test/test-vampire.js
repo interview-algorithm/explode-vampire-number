@@ -56,7 +56,7 @@ describe('#parseVampireNumber', function() {
 
         parsedPairs.forEach(function(pair) {
             it(pair.join() + ' should be parsed out for ' + num, function() {
-                assert.ok(pairsStrs.indexOf(pair.sort().join()) > -1);
+                assert.ok(pairsStrs.indexOf(pair.join()) > -1);
             });
         });
     });

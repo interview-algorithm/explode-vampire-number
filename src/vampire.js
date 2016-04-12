@@ -15,17 +15,17 @@ export const isVampirePair = (prev, next) => {
 };
 
 export const parseVampireNumber = num => {
-    let pairs = [];
+    const pairs = [];
 
     if (isNaN(num)) {
         return pairs;
     }
 
-    if (parseInt(num, 10) !== +num) {
+    num = +num;
+
+    if (parseInt(num, 10) !== num) {
         return pairs;
     }
-
-    num = +num;
 
     const BIT = num.toString(10).length;
 
@@ -44,9 +44,14 @@ export const parseVampireNumber = num => {
         if (num % i !== 0) {
             continue;
         }
-        
+
         let j = num / i;
-        
+
+        // Prevent duplicated,eg.[204, 615] vs [615, 204]
+        if (j < i) {
+            break;
+        }
+
         if ((num - i - j) % 9 !== 0) {
             continue;
         }

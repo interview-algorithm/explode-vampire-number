@@ -29,7 +29,7 @@ export const parseVampireNumber = num => {
 
     const BIT = num.toString(10).length;
 
-    if (BIT & 1) {
+    if (BIT & 1 === 1) {
         return pairs;
     }
 
@@ -51,7 +51,12 @@ export const parseVampireNumber = num => {
         if (j < i) {
             break;
         }
-
+        /* eg.
+         * N = 1000a + 100b + 10c + d = x * y
+         * x = 10a + b
+         * y = 10c + d
+         * N - x - y = 990a + 99b + 9c = 9 * (110a + 11b + c)
+         */
         if ((num - i - j) % 9 !== 0) {
             continue;
         }
@@ -64,5 +69,5 @@ export const parseVampireNumber = num => {
 };
 
 export const isVampireNumber = num => {
-    return !!parseVampireNumber(num).length;
+    return parseVampireNumber(num).length > 0;
 };

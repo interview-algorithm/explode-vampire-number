@@ -10,7 +10,7 @@ Explode a [vampire number](https://en.wikipedia.org/wiki/Vampire_number).
 var vampire = require('explode-vampire-number');
 
 vampire.isVampirePair(204, 615);// true
-vampire.parseVampireNumber(); // [204, 615],[246, 510]
+vampire.explodeVampireNumber(); // [204, 615],[246, 510]
 vampire.isVampireNumber(125460);// true
 
 ```

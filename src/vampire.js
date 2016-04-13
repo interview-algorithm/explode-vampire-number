@@ -34,7 +34,7 @@ export const isVampirePair = (prev, next) => {
     return product.toString(10).split('').sort().join('') === (prev + '' + next).split('').sort().join('');
 };
 
-export const parseVampireNumber = num => {
+export const explodeVampireNumber = num => {
     const pairs = [];
 
     if (!isInteger(num)) {
@@ -83,5 +83,5 @@ export const parseVampireNumber = num => {
 };
 
 export const isVampireNumber = num => {
-    return parseVampireNumber(num).length > 0;
+    return explodeVampireNumber(num).length > 0;
 };

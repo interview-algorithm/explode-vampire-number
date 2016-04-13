@@ -10,12 +10,28 @@
  * @since 0.1.0
  */
 import isInteger from 'is-integer';
+import digitCount from 'digit-count';
 
 export const isVampirePair = (prev, next) => {
     if (!isInteger(prev) || !isInteger(next)) {
         return false;
     }
-    return (prev * next).toString(10).split('').sort().join('') === (prev + '' + next).split('').sort().join('');
+
+    if (digitCount(prev) !== digitCount(next)) {
+        return false;
+    }
+
+    const product = prev * next;
+
+    if (product % 100 === 0) {
+        return false;
+    }
+
+    if (digitCount(prev) + digitCount(next) !== digitCount(product)) {
+        return false;
+    }
+
+    return product.toString(10).split('').sort().join('') === (prev + '' + next).split('').sort().join('');
 };
 
 export const parseVampireNumber = num => {

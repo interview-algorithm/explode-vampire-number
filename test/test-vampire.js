@@ -51,12 +51,12 @@ describe('#isVampirePair', function () {
     });
 });
 
-describe('#parseVampireNumber', function () {
+describe('#explodeVampireNumber', function () {
     Object.keys(cases).forEach(function (num) {
         var pairsStrs = cases[num].map(function (pair) {
             return pair.join();
         });
-        var parsedPairs = Vampire.parseVampireNumber(num);
+        var parsedPairs = Vampire.explodeVampireNumber(num);
 
         parsedPairs.forEach(function (pair) {
             it(pair.join() + ' should be parsed out for ' + num, function () {
@@ -65,7 +65,7 @@ describe('#parseVampireNumber', function () {
         });
     });
     it('strings do not work', function () {
-        assert.ok(!Vampire.parseVampireNumber('1260').length);
+        assert.ok(!Vampire.explodeVampireNumber('1260').length);
     });
 });
 

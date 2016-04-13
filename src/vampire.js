@@ -9,21 +9,19 @@
  * @version 0.1.0
  * @since 0.1.0
  */
+import isInteger from 'is-integer';
 
 export const isVampirePair = (prev, next) => {
+    if (!isInteger(prev) || !isInteger(next)) {
+        return false;
+    }
     return (prev * next).toString(10).split('').sort().join('') === (prev + '' + next).split('').sort().join('');
 };
 
 export const parseVampireNumber = num => {
     const pairs = [];
 
-    if (isNaN(num)) {
-        return pairs;
-    }
-
-    num = +num;
-
-    if (parseInt(num, 10) !== num) {
+    if (!isInteger(num)) {
         return pairs;
     }
 

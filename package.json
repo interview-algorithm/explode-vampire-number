@@ -1,6 +1,6 @@
 {
   "name": "explode-vampire-number",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Explode a vampire number",
   "main": "dist/explodeVampireNumber.js",
   "scripts": {

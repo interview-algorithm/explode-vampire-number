@@ -2,7 +2,7 @@
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
-Explode a [vampire number](https://en.wikipedia.org/wiki/Vampire_number).
+Explode a [vampire number](https://en.wikipedia.org/wiki/Vampire_number). See [here](http://interview-algorithm.github.io/explode-vampire-number/) for details.
 
 # Usage
 

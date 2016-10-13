@@ -10,7 +10,7 @@ Explode a [vampire number](https://en.wikipedia.org/wiki/Vampire_number). See [h
 var vampire = require('explode-vampire-number');
 
 vampire.isVampirePair(204, 615);// true
-vampire.explodeVampireNumber(); // [204, 615],[246, 510]
+vampire.explodeVampireNumber(125460); // [204, 615],[246, 510]
 vampire.isVampireNumber(125460);// true
 
 ```
@@ -26,5 +26,5 @@ vampire.isVampireNumber(125460);// true
 [travis-image]: http://img.shields.io/travis/interview-algorithm/explode-vampire-number.svg
 [david-dm-url]:https://david-dm.org/interview-algorithm/explode-vampire-number
 [david-dm-image]:https://david-dm.org/interview-algorithm/explode-vampire-number.svg
-[david-dm-dev-url]:https://david-dm.org/interview-algorithm/explode-vampire-number#info=devDependencies
+[david-dm-dev-url]:https://david-dm.org/interview-algorithm/explode-vampire-number#type=dev
 [david-dm-dev-image]:https://david-dm.org/interview-algorithm/explode-vampire-number/dev-status.svg
